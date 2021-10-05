@@ -61,7 +61,7 @@ body{
 }
 
 .welcome-part{
-  background-image: url(/img/canyon.jpg);
+  background-image: url(../img/canyon.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -130,7 +130,7 @@ body{
 }
 
 .subscribe-index{
-  background-image: url(/img/canyon-blur.jpg);
+  background-image: url(../img/canyon-blur.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
   line-height: 26px;
@@ -184,7 +184,7 @@ address a{
 }
 
 .catalog-container{
-  background-image:url(/img/inner/catalog-background.jpg);
+  background-image:url(../img/inner/catalog-background.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: #fff;
