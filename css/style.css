@@ -2,7 +2,7 @@
   font-family:"PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url(fonts/ptsans-400.woff2) format("woff2");
+  src: url(../fonts/ptsans-400.woff2) format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family:"PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url(fonts/ptsans-700.woff2) format("woff2");
+  src: url(../fonts/ptsans-700.woff2) format("woff2");
   font-display: swap;
 }
 
@@ -206,7 +206,7 @@ address a{
 .catalog-filter-title{
   font-size: 20px;
   line-height: 26px;
-  font-style: bold;
+  font-weight: bold;
 }
 
 .control-label{
@@ -219,16 +219,16 @@ address a{
 }
 
 .apply-filter{
-font-family: "PT Sans", sans-serif;
-font-size: 16px;
-line-height: 21px;
-background-color: #83B3D3;
-border: none;
-color: #fff;
-text-transform: uppercase;
-text-align: center;
-font-style: normal;
-font-weight: bold;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  background-color: #83B3D3;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: normal;
+  font-weight: bold;
 }
 
 .reset-filter{
@@ -237,6 +237,7 @@ font-weight: bold;
   background-color:transparent;
   font-size: 18px;
   line-height: 23px;
+  color: #fff;
 }
 
 .search-results{
