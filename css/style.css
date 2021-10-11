@@ -14,10 +14,35 @@
   font-display: swap;
 }
 
+html{
+  height: 100%;
+  width: 1280px;
+}
+
 body{
+  margin: 0 40px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 1200px;
   font-family: "PT Sans", sans-serif;
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   font-style: normal;
+}
+
+.navigation{
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.nav-list{
+  margin: 0;
+  padding: 0;
+  width: 309px;
+  margin-right: 151px;
+
 }
 
 .page-header{
@@ -30,6 +55,11 @@ body{
   font-weight: bold;
   text-decoration: none;
   color: #000;
+}
+
+.nav-user{
+  width: 250px;
+  margin-left: auto;
 }
 
 .button{
@@ -48,6 +78,10 @@ body{
   font-weight: bold;
 }
 
+.main-container{
+  flex-grow: 1;
+}
+
 .main-index{
   background-color: #fff;
   color: #000;
@@ -60,10 +94,32 @@ body{
   color: #000;
 }
 
+.page-container{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+img.welcome{
+  display: block;
+  margin: 0 auto;
+}
+
 .welcome-part{
-  background-image: url(../img/canyon.jpg);
+  background-image: url(../img/index/canyon.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
+}
+
+.u-welcome{
+  width: 1200px;
+}
+
+.u-welcome-container{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 720px;
 }
 
 .under-welcome{
@@ -76,6 +132,16 @@ body{
   font-size: 22px;
   line-height: 36px;
   color: #333;
+}
+
+.advantages-list{
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-item{
+  width: 400px;
 }
 
 .advantages-item p{
@@ -107,6 +173,7 @@ body{
 }
 
 .hotel-search{
+  width: 1200px;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
@@ -130,7 +197,7 @@ body{
 }
 
 .subscribe-index{
-  background-image: url(../img/canyon-blur.jpg);
+  background-image: url(../img/index/canyon-blur.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
   line-height: 26px;
@@ -169,6 +236,11 @@ body{
   font-weight: bold;
 }
 
+.page-footer{
+  display: flex;
+  justify-content: space-between;
+}
+
 footer{
   background-color: #fff;
 }
@@ -184,7 +256,7 @@ address a{
 }
 
 .catalog-container{
-  background-image:url(../img/inner/catalog-background.jpg);
+  background-image:url(../img/catalog/catalog-background.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: #fff;
