@@ -16,34 +16,32 @@
 
 html{
   height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #F2F2F2;
 }
 
 body{
-  margin: 0 40px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  width: 100%;
-  max-width: 1280px;
+  max-width: 1200px;
   font-family: "PT Sans", sans-serif;
-  background-color: #F2F2F2;
+  background-color: #fff;
   font-style: normal;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 .navigation{
   display: flex;
-  width: 1200px;
-  margin: 0 auto;
 }
 
 .nav-list{
-  margin: 0 151px 0 0;
+  margin: 0 auto;
   padding: 0;
-  width: 309px;
-}
-
-.page-header{
-  background-color: #fff;
+  width: 310px;
+  margin-left: auto;
 }
 
 .page-header a{
@@ -54,8 +52,12 @@ body{
   color: #000;
 }
 
+.logo{
+  width: 138px;
+}
+
 .nav-user{
-  max-width: 250px;
+  width: 250px;
   margin-left: auto;
 }
 
@@ -80,26 +82,18 @@ body{
 }
 
 .main-index{
-  background-color: #fff;
   color: #000;
   text-align: center;
 }
 
 .main-inner{
-  background-color: #fff;
   text-align: left;
   color: #000;
 }
 
 .page-container{
-  width: 1200px;
   margin: 0 auto;
   padding: 0;
-}
-
-img.welcome{
-  display: block;
-  margin: 0 auto;
 }
 
 .welcome-part{
@@ -108,21 +102,23 @@ img.welcome{
   background-repeat: no-repeat;
 }
 
-.u-welcome{
-  width: 1200px;
+img.welcome{
+  display: block;
+  margin: 0 auto;
+  width: 458px;
+  margin-bottom: 29px;
 }
 
-.u-welcome-container{
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
+.u-welcome{
   width: 720px;
+  margin: 0 auto;
 }
 
 .under-welcome{
   font-size: 30px;
   line-height: 36px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .under-welcome-description{
@@ -170,11 +166,11 @@ img.welcome{
 }
 
 .hotel-search{
-  width: 1200px;
   line-height: 36px;
-  text-align: center;
   text-transform: uppercase;
   font-weight: bold;
+  width: 720px;
+  margin: 0 auto;
 }
 
 .under-advantages{
@@ -200,6 +196,11 @@ img.welcome{
   line-height: 26px;
   color: #fff;
   text-transform: uppercase;
+}
+
+.u-subscribe-container{
+  width: 720px;
+  margin: 0 auto;
 }
 
 .under-subscribe{
@@ -228,7 +229,6 @@ img.welcome{
   border: none;
   color: #fff;
   text-transform: uppercase;
-  text-align: center;
   font-style: normal;
   font-weight: bold;
 }
@@ -238,9 +238,6 @@ img.welcome{
   justify-content: space-between;
 }
 
-footer{
-  background-color: #fff;
-}
 address a{
   font-family: "PT Sans", sans-serif;
   font-size: 40px;
