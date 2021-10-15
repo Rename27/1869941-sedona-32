@@ -73,10 +73,6 @@ body{
   font-weight: bold;
 }
 
-.main-container{
-  flex-grow: 1;
-}
-
 .main-index{
   color: #000;
   text-align: center;
@@ -88,7 +84,7 @@ body{
 }
 
 .page-container{
-  margin: 0 auto;
+  flex-grow: 1;
   padding: 0;
 }
 
@@ -232,6 +228,8 @@ img.welcome{
 .page-footer{
   display: flex;
   justify-content: space-between;
+  width: 1056px;
+  margin: 0 auto;
 }
 
 address a{
@@ -250,12 +248,22 @@ address a{
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: #fff;
-  text-align: left;
+}
+
+.header-inner-container{
+  width: 1058px;
+  margin: 0 auto;
 }
 
 .inner-header-title{
   font-size: 60px;
   line-height: 78px;
+}
+
+.breadcrumbs{
+  display: flex;
+  width: 111px;
+  align-items: baseline;
 }
 
 .breadcrumbs-link{
@@ -271,6 +279,17 @@ address a{
   font-weight: bold;
 }
 
+.catalog-filter{
+  display: flex;
+}
+
+.price{
+  display: flex;
+  flex-direction: column;
+  width: 528px;
+  flex-wrap: wrap;
+}
+
 .control-label{
   font-size: 18px;
   line-height: 23px;
@@ -280,12 +299,17 @@ address a{
   border: none;
 }
 
-.apply-filter{
+button.filter{
+  width: 160px;
   font-family: "PT Sans", sans-serif;
+  border: none;
+}
+
+.apply{
   font-size: 16px;
   line-height: 21px;
+  border-radius: 4px;
   background-color: #83B3D3;
-  border: none;
   color: #fff;
   text-transform: uppercase;
   text-align: center;
@@ -293,13 +317,22 @@ address a{
   font-weight: bold;
 }
 
-.reset-filter{
-  font-family: "PT Sans", sans-serif;
-  border: none;
+.reset{
   background-color:transparent;
   font-size: 18px;
   line-height: 23px;
   color: #fff;
+}
+
+.search-container{
+  width: 1057px;
+  margin: 0 auto;
+}
+
+.search-results-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .search-results{
@@ -312,6 +345,19 @@ address a{
 .select-control{
   font-size: 18px;
   line-height: 23px;
+}
+
+.hotel-card{
+  display: flex;
+  width: 1056px;
+}
+
+.hotel-card-rating{
+  margin-left: auto;
+}
+
+.hotel-list{
+  padding: 0;
 }
 
 .hotel-list a{
@@ -355,13 +401,23 @@ a.more-details-button{
   background-color: #7DB54F;
 }
 
-.pagination-show-more{
+button.show-more{
+  display: block;
   font-size: 20px;
   line-height: 26px;
   text-transform: uppercase;
   background-color: #83B3D3;
   border: none;
   color: #fff;
+  width: 625px;
+  margin: 0 auto;
+}
+
+.pagination{
+  display: flex;
+  justify-content: space-between;
+  width: 1056px;
+  margin: 0 auto;
 }
 
 .pagination-link{
