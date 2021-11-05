@@ -568,17 +568,34 @@ address{
 }
 
 .breadcrumbs{
+  position: relative;
+  top: -3px;
+  left: 2px;
   display: flex;
   width: 111px;
   align-items: baseline;
   margin-bottom: 42px;
 }
 
-.braedcrumbs-list{
+.breadcrumbs-list{
   list-style-type: none;
   margin: 0;
   padding: 0;
   margin-right: 26px;
+}
+.breadcrumbs-list::after{
+  content: '';
+  width: 6px;
+  height: 8px;
+  position: absolute;
+  top: 7px;
+  left: 23px;
+  background-image: url(../img/catalog/svg/breadcrumbs-elem.svg);
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs-list:last-child::after {
+  content: none;
 }
 
 .breadcrumbs-link{
@@ -627,7 +644,7 @@ address{
   border: none;
 }
 
-.apply--reset-buttons{
+.apply-reset-buttons{
   align-self: flex-end;
   text-align: center;
 }
@@ -682,12 +699,44 @@ button.filter{
   line-height: 23px;
 }
 
+.mode-list{
+  display: flex;
+}
+
 .mode{
+  position: relative;
+  width: 48px;
+  height: 48px;
   text-decoration: none;
   border: 2px solid #E5E5E5;
   box-sizing: border-box;
-  padding: 17px 16px;
   border-radius: 4px;
+  margin-right: 8px;
+}
+
+.mode-current{
+  border: 2px solid #000;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.mode:hover{
+  border: 2px solid #83B3D3;
+}
+
+.mode:focus{
+  border: 2px solid #83B3D3;
+  outline: none;
+}
+
+.mode svg{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000;
 }
 
 .hotel-card{
@@ -715,6 +764,19 @@ button.filter{
   display: grid;
   grid-template-columns: 80px 80px 80px 80px;
   grid-template-rows: 31px 54px 37px;
+}
+
+.hotel-card-link:hover{
+  opacity: 0.6;
+}
+
+.hotel-card-link:active{
+  opacity: 0.3;
+}
+
+.hotel-card-link:focus{
+  outline: 3px solid #83B3D3;
+  outline-offset: 1px;
 }
 
 .hotel-rating{
@@ -771,7 +833,7 @@ a.more-details-button{
   background-color: #756257;
   border-radius: 4px;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 36px;
   color: #fff;
   text-transform: uppercase;
 }
@@ -785,10 +847,43 @@ a.more-details-button{
   line-height: 21px;
   color: #fff;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.favorites-button:hover{
+  background-color: #68A2CA;
+  outline: 1px solid #756257;
+}
+
+.favorites-button:active{
+  color: rgba(255, 255, 255, 0.3)
+}
+
+.favorites-button:focus{
+  outline: 3px solid #756257;
+  border-radius: 4px;;
+}
+
+.favorites-button-selected{
+  background-color: #7DB54F;
+}
+
+.favorites-button-selected:hover{
+  background-color: #6C9E42;
+  outline: none;
+}
+
+.favorites-button-selected:active{
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.favorites-button-selected:focus{
+  background-color: #6C9E42;
 }
 
 button.show-more{
   display: block;
+  border-radius: 4px;
   font-size: 20px;
   line-height: 26px;
   text-transform: uppercase;
@@ -796,7 +891,20 @@ button.show-more{
   border: none;
   color: #fff;
   width: 625px;
+  height: 55px;
   margin: 0 auto;
+}
+button.show-more:hover{
+  background-color: #68A2CA;
+}
+
+button.show-more:active{
+  color: rgba(255, 255, 255, 0.3);
+}
+
+button.show-more:focus{
+  outline: 3px solid #756257;
+  border-radius: 10px;
 }
 
 .pagination{
@@ -804,12 +912,14 @@ button.show-more{
   justify-content: space-between;
   width: 1058px;
   margin: 0 auto;
-  margin-top: 61px;
+  margin-top: 29px;
+  border-top: 1px solid #E5E5E5;
 }
 
 .pagination-list{
   display: flex;
   margin: 0;
+  margin-top: 32px;
   padding: 0;
   list-style-type: none;
 }
@@ -819,14 +929,31 @@ button.show-more{
 }
 
 .pagination-link{
+  display: block;
   border-radius: 4px;
-  padding: 10px 10px;
+  width: 55px;
+  height: 55px;
+  text-align: center;
   font-size: 20px;
-  line-height: 26px;
+  line-height: 55px;
   font-weight: bold;
   background-color: #83B3D3;
   color: #fff;
   text-decoration: none;
+}
+
+.pagination-link:hover:not(.pagination-link-current){
+  background-color: #68A2CA;
+}
+
+.pagination-link:active:not(.pagination-link-current){
+  background-color: #68A2CA;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.pagination-link:focus:not(.pagination-link-current){
+  outline: 3px solid #756257;
+  border-radius: 4px;;
 }
 
 .pagination-link-current{
@@ -838,6 +965,10 @@ button.show-more{
 .amt-control{
   font-size: 18px;
   line-height: 23px;
+}
+
+.subscribe-catalog .subscribe-form input{
+  background-color: #F2F2F2;
 }
 
 .subscribe-catalog{
