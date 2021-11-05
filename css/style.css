@@ -46,8 +46,9 @@ body{
 
 .navigation{
   display: flex;
-  max-width: 1058px;
-  height: 65px;
+  justify-content: space-between;
+  position: relative;
+  max-width: 1082px;
   margin: 0 auto;
 }
 
@@ -56,12 +57,14 @@ body{
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  width: 460px;
   list-style-type: none;
 }
 
 .nav-link{
   display: block;
-  padding: 19px 0 25px 0;
+  position: relative;
+  padding: 6px 12px;
   font-size: 20px;
   line-height: 26px;
   font-weight: bold;
@@ -69,34 +72,111 @@ body{
   color: #000;
 }
 
-.nav-item{
-  margin-right: 34px;
+.nav-link:hover{
+  color: #756257;
 }
 
-.nav-item:nth-child(3){
-  margin-right: 151px;
+.nav-link:active{
+  color: rgba(117, 98, 87, 0.3)
+}
+
+.nav-link:focus{
+  outline: 3px solid #83B3D3;
+  outline-offset: -4px;
+  border-radius: 10px;
+}
+
+.nav-user .nav-link:focus{
+  outline-offset: -5px;
+}
+
+.nav-link-current::before{
+  position: absolute;
+  right: 10px;
+  top: 52px;
+  left: 12px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
+}
+
+.nav-item{
+  margin-top: 12px;
+  margin-right: 9px;
+  margin-bottom: 11px;
 }
 
 .sedona-logo{
-  z-index: 1;
+  background-image: url("../img/header-footer/svg/logo-sedona.svg");
+  position: absolute;
+  outline: none;
+  width: 138px;
+  height: 70px;
+  top: 4px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.nav-user{
+  justify-content: flex-end;
+  width: 340px;
+}
+
+.nav-item:last-child{
+  margin-right: 0;
 }
 
 .nav-user .nav-item{
-  margin-right: 21px;
-}
-
-.nav-user.nav-list{
-  margin-left: 209px;
-}
-
-.nav-user .nav-item:nth-child(3){
-  margin-right: 0px;
+  margin-top: 14px;
+  margin-right: 0;
 }
 
 .nav-user .nav-link{
-  padding-top: 22px;
+  padding: 7px 10px;
 }
+
+.favorites-link::after{
+position: absolute;
+top: 0;
+right: -4px;
+content: '12';
+width: 19px;
+height: 19px;
+font-size: 10px;
+line-height: 20px;
+text-align: center;
+color: #fff;
+background-color: #7DB54F;
+border-radius: 50%;
+}
+
+.favorites-link:active::after{
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-icon{
+  top: 0px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
+
+.nav-icon:hover{
+  fill: #756257;
+}
+
+.nav-icon:active{
+  fill: rgba(117, 98, 87, 0.3)
+}
+
 .button{
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
   font-family: "PT Sans", sans-serif;
   background-color: #756257;
   border: none;
@@ -106,12 +186,25 @@ body{
   font-style: normal;
 }
 
+.button:hover{
+  background-color: #615048;
+}
+
+.button:active{
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button:focus{
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
 .button-nav-link{
   border-radius: 4px;
   width: 160px;
-  margin-top: 14px;
-  margin-left: 12px;
-  padding: 9px 0 9px 0;
+  margin-right: 13px;
+  margin-left: 24px;
+  padding: 9px 10px;
   font-size: 16px;
   line-height: 21px;
   font-weight: bold;
@@ -184,6 +277,7 @@ img.welcome{
 }
 
 .advantages-item{
+  position: relative;
   width: 400px;
   height: 384px;
 }
@@ -199,10 +293,15 @@ img.welcome{
   padding-bottom: 30px;
 }
 
+.advantages-pic + .advantages-title{
+  padding-top: 108px;
+  padding-bottom: 18px;
+}
+
 .advantages-description{
   margin: 0;
   margin-bottom: 77px;
-  padding: 0 90px 0 90px;
+  padding: 0 78px 0 78px;
 }
 
 .advantages-item h3{
@@ -217,8 +316,8 @@ img.welcome{
 }
 
 .advantages-pic{
-  margin-top: 86px;
-  margin-bottom: 23px;
+  position: relative;
+  top: 87px;
 }
 
 .background-color1{
@@ -300,73 +399,152 @@ img.welcome{
 }
 
 .subscribe-form{
-  padding-bottom: 27px;
+  display: flex;
+  justify-content: center;
 }
 
 .subscribe-form input{
+  border-radius: 10px 0 0 10px;
+  width: 600px;
+  height: 58px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 26px;
-  font-style: normal;
-  font-weight: normal;
   margin-bottom: 94px;
+  border: none;
 }
 
-.button-submite {
-  font-family: "PT Sans", sans-serif;
+.button-submit{
+  border-radius: 0 10px 10px 0;
+  width: 200px;
+  height: 60px;
   font-size: 20px;
   line-height: 26px;
   background-color: #83B3D3;
-  border: none;
-  color: #fff;
-  text-transform: uppercase;
-  font-style: normal;
   font-weight: bold;
+}
+
+.button-submit:hover{
+  background-color: #68A2CA;
+}
+
+.button-submit:active{
+  background-color: #68A2CA;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-submit:focus{
+  outline: 3px solid  #615048;
+  background-color: #68A2CA;
+  border-radius: 0 10px 10px 0;
 }
 
 .page-footer{
   display: flex;
-  width: 1058px;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
+  width: 1082px;
+  margin-top: 19px;
+  margin-bottom: 42px;
 }
 
 .social-network-list{
   display: flex;
   flex-wrap: wrap;
-  max-width: 120px;
   list-style-type: none;
-  margin: 0 257px 0 0;
+  margin: 0;
+  margin-top: 4px;
+  margin-left: 2px;
   padding: 0;
+  width: 130px;
+}
+
+.social-link{
+  padding: 10px;
+}
+
+.social-link:focus{
+  outline: 3px solid #83B3D3;
+  outline-offset: -1px;
+  border-radius: 10px;
+  fill: #68A2CA;
+}
+
+.social-pic{
+  fill: #83B3D3;
+}
+
+.social-pic:hover{
+  fill: #68A2CA;
+}
+
+.social-pic:active{
+  fill: rgba(104, 162, 202, 0.3);
 }
 
 .social-link-item{
-  padding-top: 50px;
-  margin-right: 30px;
-  padding-bottom: 55px;
+  margin-right: 10px;
 }
 
-.social-link-item:last-child{
+.social-link-item:nth-child(3n){
   margin-right: 0px;
 }
 
-.phone-number{
-  margin: 37px 247px 0 0;
-
+address{
+  width: 720px;
+  text-align: center;
+  margin-left: 29px;
 }
 
-address a{
+.contact-phone{
   font-family: "PT Sans", sans-serif;
   font-size: 40px;
   line-height: 40px;
-  text-align: center;
   text-decoration: none;
   color: #000;
   font-style: normal;
   font-weight: normal;
 }
 
-.html-banner{
-  margin-top: 42px;
+.contact-phone:hover{
+  color: #756257;
+}
+
+.contact-phone:active{
+  color: rgba(117, 98, 87, 0.3)
+}
+
+.contact-phone:focus{
+  outline: 3px solid #83B3D3;
+  outline-offset: -1px;
+  border-radius: 10px;
+}
+
+.htmlacadamy-banner{
+  display: block;
+  padding: 19px 23px;
+}
+
+.banner-pic{
+  position: relative;
+  left: 10px;
+  top: 2px;
+  fill: #000;
+}
+
+.banner-pic:hover{
+  fill: #756257;
+}
+
+.banner-pic:active{
+  fill: rgba(117, 98, 87, 0.3)
+}
+
+.htmlacadamy-banner:focus{
+  outline: 3px solid #83B3D3;
+  outline-offset: -1px;
+  border-radius: 10px;
 }
 
 .catalog-container{
@@ -607,10 +785,6 @@ a.more-details-button{
   line-height: 21px;
   color: #fff;
   text-transform: uppercase;
-}
-
-.in-favorites{
-  background-color: #7DB54F;
 }
 
 button.show-more{
