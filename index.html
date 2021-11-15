@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <title>Поиск гостиниц в Седона</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
 </head>
 
 <body>
@@ -267,6 +268,9 @@
   <div class="modal-container modal-container-close">
     <div class="modal modal-search">
       <button class="modal-close-button">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z" />
+        </svg>
         <span class="visually-hidden">Закрыть</span>
       </button>
       <section class="modal-content">
@@ -276,26 +280,28 @@
             <label class="modal-label" for="check-in">Дата заезда:</label>
             <input class="modal-input" type="text" id="check-in" name="check-in" value="27 апреля 2020"
               placeholder="Укажите дату">
-            <span>Мы не можем отправить вас в прошлое.</span>
+            <span class="error">Мы не можем отправить вас в прошлое.</span>
           </p>
           <p class="modal-label-group">
             <label class="modal-label" for="check-out">Дата выезда:</label>
             <input class="modal-input" type="text" id="check-out" name="check-out" value="1 сентября 2021"
               placeholder="Укажите дату">
-            <span>На эти даты есть свободные номера. Пока есть.</span>
+            <span class="success">На эти даты есть свободные номера. Пока есть.</span>
           </p>
           <div class="modal-label-count-wrapper">
             <p class="modal-label-count">
               <label class="adualt-count-label" for="adults-count">Взрослые:</label>
               <input class="count" type="text" id="adults-count" name="adults-count" value="2">
-              <button type="button" class="icon icon-minus"><svg width="13" height="1" viewBox="0 0 13 1" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+              <button type="button" class="icon icon-minus">
+                <svg width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 0v1h13V0H0Z" />
-                </svg></button>
-              <button type="button" class="icon icon-plus"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+                </svg>
+              </button>
+              <button type="button" class="icon icon-plus">
+                <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
                   <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" />
-                </svg></button>
+                </svg>
+              </button>
             </p>
             <p class="modal-label-count">
               <label class="childs-count-label" for="childs-count">Дети:</label>
